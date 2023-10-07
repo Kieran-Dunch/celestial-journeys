@@ -1,16 +1,21 @@
-import logo from './logo.svg';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import './App.css';
-import Home from './components/Home';
-import NavBar from './components/NavBar';
+
+// components
+import Home from './components/LandingPage';
+import PlanetIndex from './components/PlanetIndex';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <NavBar />
-        <Home />
-      </header>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/index" element={<PlanetIndex />} />
+        </ Routes>
+      </Router>
+      {/* <NavBar />
+      <Home /> */}
     </div>
   );
 }
