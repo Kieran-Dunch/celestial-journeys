@@ -4,6 +4,7 @@ import { starsBackground } from './starsBackground';
 export const Container = styled.div`
     position: relative;
     height: 100%;
+    width: 100%;
     background-color: ${(props) => props.theme.colors.black};
     overflow: hidden;
 
