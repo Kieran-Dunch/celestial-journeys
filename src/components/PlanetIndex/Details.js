@@ -1,7 +1,9 @@
 import { useContext } from 'react';
 import { motion } from 'framer-motion';
+import { Card, Button } from 'react-bootstrap'  
 import { PlanetsContext } from './context/planets';
 import { planetsData } from './planets-data'
+import img from "../../assets/images/planet-earth.svg"
 
 export function Details() {
   const { planets, dispatch } = useContext(PlanetsContext)
@@ -23,8 +25,23 @@ export function Details() {
       }}
     >
       <div className="flex">
-        <h2 className="text-xl flex-1">{planet.title}</h2>
+        <h2 className="text-3xl flex-1">{planet.title}</h2>
         <button onClick={() => dispatch({ type: 'SELECT_PLANET', payload: null })}>X</button>
+      </div>
+      
+      <div className="grid grid-cols-2 gap-4">
+        {[{ title: 'Attraction 1' }, { title: 'Attraction 2' }, { title: 'Attraction 3' }].map(({ title }) => (
+          <Card>
+            <Card.Img className="p-4" variant="top" src={img} />
+            <Card.Body>
+              <Card.Title>{title}</Card.Title>
+              <Card.Text>
+                Quick description
+              </Card.Text>
+              <Button variant="primary">Book</Button>
+            </Card.Body>
+          </Card>
+        ))}
       </div>
     </motion.div>
   )
