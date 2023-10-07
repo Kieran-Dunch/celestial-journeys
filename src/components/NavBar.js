@@ -1,9 +1,11 @@
+import { Link } from 'react-router-dom';
+
 export default function NavBar() {
   return (
     <>
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Saturn-Travel</a>
+          <Link to="/" class="navbar-brand" href="">Saturn-Travel</Link>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">

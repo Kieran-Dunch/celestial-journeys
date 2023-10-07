@@ -1,10 +1,19 @@
+import saturn from './saturn.jpg'
+
+import { Link } from 'react-router-dom'
 
 export default function LandingPage() {
   return (
     <>
-      <div className="card">
-        <div class="card-title">A HOME AMONG THE STAR BLAH BLAH</div>
-        <p className="card-text">Testing bootstrap</p>
+      <div className="container h-100">
+        <div className="row align-items-center">
+          <div className="text col-6">
+            <h1>Embark on a cosmic odyssey.</h1>
+            <p>Explore the Solar System's wonders, create your adventure & journey beyond the stars!</p>
+            <Link to="/index" className="btn btn-primary">Explore Destinations</Link>
+          </div>
+          <img src={saturn} alt="Saturn" id="saturn-logo" className='col-6' />
+        </div>
       </div>
     </>
   )
