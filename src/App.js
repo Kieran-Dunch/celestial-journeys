@@ -7,7 +7,7 @@ import PlanetIndex from './components/PlanetIndex';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App h-screen flex flex-column overflow-auto">
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
