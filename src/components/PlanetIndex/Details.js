@@ -19,7 +19,7 @@ export function Details() {
       transition={{
         type: "spring",
         stiffness: 250,
-        damping: 20
+        damping: 15
       }}
     >
       <div className="flex">
