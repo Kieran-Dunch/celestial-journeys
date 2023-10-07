@@ -1,3 +1,5 @@
+import { useContext } from 'react';
+import { PlanetsContext } from '../PlanetIndex/context/planets';
 import styled, { css } from 'styled-components';
 import { motion } from 'framer-motion';
 import { asteroidsBackground } from './asteroidsBackground';
@@ -10,14 +12,17 @@ import jupiterImage from '../../assets/images/planet-jupiter.svg';
 import saturnImage from '../../assets/images/planet-saturn.svg';
 import uranusImage from '../../assets/images/planet-uranus.svg';
 import neptuneImage from '../../assets/images/planet-neptune.svg';
-import { NavLink } from 'react-router-dom';
 
 export const Container = styled(motion.div)`
     position: relative;
     height: 100%;
 `;
 
-export const Planet = styled(NavLink)`
+export const Planet = styled(({ to, className }) => {
+  const { dispatch } = useContext(PlanetsContext)
+  
+  return <div role="button" className={className} onClick={() => dispatch({ type: 'SELECT_PLANET', payload: to })} />
+})`
     position: absolute;
     top: 50%;
     left: 50%;
