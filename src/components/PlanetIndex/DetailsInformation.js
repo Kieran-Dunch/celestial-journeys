@@ -65,7 +65,7 @@ export function DetailsInformation () {
           <button className="rounded bg-black text-center text-white py-2 w-full">Book</button>
         </motion.div>
       </div>
-      <div className="p-4 bg-white mt-24">
+      <div className="bg-white mt-24">
         <p className="text w-3/6 mx-auto text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, aspernatur assumenda autem beatae consequatur consequuntur distinctio, dolore ducimus eaque, explicabo incidunt magnam nostrum provident quo tempora? Doloremque fuga molestias quis?</p>
         <div className="flex gap-4 justify-center mt-12">
           <motion.div
