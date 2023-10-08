@@ -1,5 +1,5 @@
 import { useContext, useRef, useState } from 'react';
-import { motion, useScroll, useMotionValueEvent } from 'framer-motion'
+import { motion, useScroll, useMotionValueEvent, useTransform } from 'framer-motion';
 import { PlanetsContext } from './context/planets';
 import { BookingContext } from './context/booking';
 import img from '../../assets/images/planet-earth.svg';
@@ -16,7 +16,7 @@ export function DetailsInformation () {
   const { dispatch: planetsDispatch } = useContext(PlanetsContext)
   const containerRef = useRef(null)
   
-  const { scrollYProgress } = useScroll({
+  const { scrollYProgress, scrollY } = useScroll({
     container: containerRef
   })
   
@@ -27,7 +27,10 @@ export function DetailsInformation () {
     setOpacity(latest * 5.5)
     setTranslateY(`${Math.min(latest * 350, 100)}px`)
   })
-
+  
+  
+  const parallax = useTransform(scrollY, [0, containerRef.current?.scrollHeight], [0, 200])
+  
   return (
     <motion.div
       ref={containerRef}
@@ -67,7 +70,7 @@ export function DetailsInformation () {
       </div>
       <div className="bg-white mt-24">
         <p className="text w-3/6 mx-auto text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, aspernatur assumenda autem beatae consequatur consequuntur distinctio, dolore ducimus eaque, explicabo incidunt magnam nostrum provident quo tempora? Doloremque fuga molestias quis?</p>
-        <div className="flex gap-4 justify-center mt-12">
+        <motion.div style={{ transform: `translateY(${parallax.get() - 50}px)` }} className="flex gap-4 justify-center mt-24">
           <motion.div
             initial={{ transform: 'translate(-200px)', opacity: 0 }}
             whileInView={{ transform: 'translate(0)', opacity: 1 }}
@@ -85,21 +88,16 @@ export function DetailsInformation () {
             viewport={{ once: true }}
             transition={{
               duration: 0.3,
-              delay: 1
+              delay: 0.5
             }}
           >
             <img src={saturnImg3} alt=""/>
           </motion.div>
-        </div>
-        <p className="mt-12 text w-3/6 mx-auto text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, aspernatur assumenda autem beatae consequatur consequuntur distinctio, dolore ducimus eaque, explicabo incidunt magnam nostrum provident quo tempora? Doloremque fuga molestias quis?</p>
+        </motion.div>
+        <p className="mt-24 text w-3/6 mx-auto text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, aspernatur assumenda autem beatae consequatur consequuntur distinctio, dolore ducimus eaque, explicabo incidunt magnam nostrum provident quo tempora? Doloremque fuga molestias quis?</p>
         <motion.div
-          className="mt-12"
-          initial={{ transform: 'translateY(200px)', opacity: 0 }}
-          whileInView={{ transform: 'translateY(0)', opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{
-            duration: 0.3
-          }}
+          className="mt-24"
+          style={{ transform: `translateY(${parallax.get() - 100}px)` }}
         >
           <img src={saturnImg2} alt=""/>
         </motion.div>
