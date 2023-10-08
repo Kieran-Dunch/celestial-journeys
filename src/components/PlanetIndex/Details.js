@@ -4,7 +4,7 @@ import { Card, Button } from 'react-bootstrap'
 import { BookingContext } from './context/booking';  
 import { PlanetsContext } from './context/planets';
 import { planetsData } from './planets-data'
-import img from "../../assets/images/planet-earth.svg"
+import saturnImg from '../../assets/images/saturn_false.jpg';
 
 export function Details() {
   const { planets, dispatch } = useContext(PlanetsContext)
@@ -33,18 +33,26 @@ export function Details() {
       </div>
       
       <div className="grid grid-cols-2 gap-2">
-        {[{ title: 'Attraction 1' }, { title: 'Attraction 2' }, { title: 'Attraction 3' }].map(({ title }) => (
+        {planets.selectedPlanet === 'saturn' ? (
           <Card>
-            <Card.Img className="p-4" variant="top" src={img} />
+            <Card.Img className="p-4" variant="top" src={saturnImg} />
             <Card.Body>
-              <Card.Title>{title}</Card.Title>
+              <Card.Title>Saturn</Card.Title>
               <Card.Text>
-                Quick description
+                The Saturnian Ring Odyssey
               </Card.Text>
               <Button variant="primary" onClick={() => dispatchBooking({ type: 'SELECT_BOOKING', payload: true })}>Book</Button>
             </Card.Body>
           </Card>
-        ))}
+        ) : (
+          <div>
+            <div className="text-xl">{planet.title} is not available for tourism yet!</div>
+            <div className="text-xl">
+              Try&nbsp;
+              <span className="underline text-blue-500 cursor" role="button" onClick={() => dispatch({ type: 'SELECT_PLANET', payload: 'saturn' })}>Saturn</span>
+            </div>
+          </div>
+        )}
       </div>
     </motion.div>
   )
