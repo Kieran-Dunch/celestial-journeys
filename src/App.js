@@ -15,8 +15,6 @@ function App() {
           <Route path="/index" element={<PlanetIndex />} />
         </ Routes>
       </Router>
-      {/* <NavBar />
-      <Home /> */}
     </div>
   );
 }
