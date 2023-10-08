@@ -1,0 +1,8 @@
+.details-information-container {
+    width: 100vw;
+    height: calc(100vh - 70px)
+}
+
+.card-gradient {
+    background: linear-gradient(180deg, #FF9833 0%, #C2FDDF 100%);
+}

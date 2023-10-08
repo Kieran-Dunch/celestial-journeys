@@ -1,4 +1,5 @@
 import { useReducer } from 'react';
+import { DetailsInformation } from './DetailsInformation';
 import { BookingContext } from './context/booking';
 import { Details } from './Details';
 import { PlanetsContext } from './context/planets';
@@ -31,15 +32,9 @@ export default function Index() {
     <PlanetsContext.Provider value={{ planets, dispatch }}>
       <BookingContext.Provider value={{ bookings, dispatch: dispatchBookings }}>
         <NavBar />
-        <div>SATURN VIEW</div>
-        <div className="flex-1 flex">
+        <div className="flex-1 flex relative overflow-auto">
+          {bookings.selectedBooking ? <DetailsInformation /> : <Planets />}
           <Details />
-          {!bookings.selectedBooking && <Planets />}
-          {bookings.selectedBooking && (
-            <div>
-              Details
-            </div>
-          )}
         </div>
       </BookingContext.Provider>
     </PlanetsContext.Provider>
