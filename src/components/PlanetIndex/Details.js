@@ -11,19 +11,17 @@ export function Details() {
   const { bookings, dispatch: dispatchBooking } = useContext(BookingContext) 
   const planet = planetsData[planets.selectedPlanet]
   
-  if (!planet) {
+  if (!planet || bookings.selectedBooking) {
     return null
   }
   
   return (
     <motion.div
-      className="p-2 bg-white text-left"
-      initial={{ width: 0 }}
-      animate={{ width: '50vw' }}
+      className="p-2 bg-white text-left w-[360px] absolute top-0 bottom-0"
+      initial={{ transform: 'translateX(-200px)' }}
+      animate={{ transform: 'translate(0)' }}
       transition={{
-        type: "spring",
-        stiffness: 250,
-        damping: 15
+        duration: 0.3
       }}
     >
       <div className="flex">
