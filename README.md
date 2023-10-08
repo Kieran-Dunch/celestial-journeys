@@ -26,3 +26,10 @@ Experienced in crafting intuitive, visually appealing interfaces and user experi
 
 Collaborative and skilled in translating ideas into visually compelling designs.
 Together, our team brings a powerful combination of technical expertise and design creativity to the Space Challenge Apps. We're excited to tackle the challenges ahead and contribute innovative solutions. Let's reach for the stars together!" 🌌🛰️🌠
+
+#### Sources
+
+We used several tools to assist us in the generation of this application, including:
+- ChatGPT (idea generation)
+- Github Copilot (code completion, suggestions, front-end)
+- [NASA](https://science.nasa.gov/saturn/facts/) (facts, information, images)
