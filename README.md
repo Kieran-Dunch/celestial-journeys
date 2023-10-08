@@ -1,70 +1,36 @@
-# Getting Started with Create React App
+# About Saturn-Travel
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Saturn-Travel is an application that our team created for the NASA Spaceapps challenge hackathon in 2023.
 
-## Available Scripts
+## The Team
 
-In the project directory, you can run:
+Meet the Wabasso Team:
 
-### `npm start`
+### 🚀 Full-Stack Developer - Andrii
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Seasoned full-stack developer with a strong track record of successful projects.
+Proficient in a wide range of programming languages and frameworks.
+Experienced in building scalable, high-performance software solutions.
+Passionate about problem-solving and tackling complex challenges.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 🚀 Full-Stack Developer - Kieran
 
-### `npm test`
+Expertise in full-stack web and mobile application development.
+Specializes in creating user-friendly, responsive interfaces and seamless user experiences.
+Committed to staying up-to-date with the latest technology trends.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 🚀 Digital Product Designer - Nastia
 
-### `npm run build`
+A creative visionary with a keen eye for design and user-centric solutions.
+Experienced in crafting intuitive, visually appealing interfaces and user experiences.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Collaborative and skilled in translating ideas into visually compelling designs.
+Together, our team brings a powerful combination of technical expertise and design creativity to the Space Challenge Apps. We're excited to tackle the challenges ahead and contribute innovative solutions. Let's reach for the stars together!" 🌌🛰️🌠
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### Sources
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+We used several tools to assist us in the generation of this application, including:
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- ChatGPT (idea generation)
+- Github Copilot (code completion (front-end))
+- [NASA](https://science.nasa.gov/saturn/facts/) (facts, information, images)

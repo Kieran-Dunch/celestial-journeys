@@ -1,7 +1,5 @@
 import video from '../assets/Galaxy_Motion_Background_Video_HD__FREE.mp4'
 
-import Carousel from 'react-bootstrap/Carousel'
-
 import { Link } from 'react-router-dom'
 
 export default function LandingPage() {
@@ -16,33 +14,6 @@ export default function LandingPage() {
               <Link to="/index" className="btn btn-light btn-lg" style={{ padding: 20 }}><strong>Explore Destinations</strong></Link>
             </div>
           </div>
-        </div>
-        <div className="carousel text-light">
-          <Carousel>
-            <Carousel.Item>
-              <p>LOL</p>
-              <Carousel.Caption>
-                <h3>First slide label</h3>
-                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-              </Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item>
-              <p>SECOND SLIDE</p>
-              <Carousel.Caption>
-                <h3>Second slide label</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              </Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item>
-              <p>THIRD SLIDE</p>
-              <Carousel.Caption>
-                <h3>Third slide label</h3>
-                <p>
-                  Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-                </p>
-              </Carousel.Caption>
-            </Carousel.Item>
-          </Carousel>
         </div>
       </div>
       <video autoPlay loop muted className="background-video">
