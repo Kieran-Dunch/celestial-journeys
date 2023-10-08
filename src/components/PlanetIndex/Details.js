@@ -17,7 +17,7 @@ export function Details() {
   
   return (
     <motion.div
-      className="p-2 bg-white text-left w-[360px] absolute top-0 bottom-0"
+      className="p-2 bg-white text-left w-[50vw] absolute top-0 bottom-0"
       initial={{ transform: 'translateX(-200px)' }}
       animate={{ transform: 'translate(0)' }}
       transition={{

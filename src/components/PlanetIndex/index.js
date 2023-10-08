@@ -32,7 +32,7 @@ export default function Index() {
     <PlanetsContext.Provider value={{ planets, dispatch }}>
       <BookingContext.Provider value={{ bookings, dispatch: dispatchBookings }}>
         <NavBar />
-        <div className="flex-1 flex relative">
+        <div className="flex-1 flex relative overflow-auto">
           {bookings.selectedBooking ? <DetailsInformation /> : <Planets />}
           <Details />
         </div>
