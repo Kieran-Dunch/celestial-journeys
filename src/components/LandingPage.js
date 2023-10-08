@@ -16,7 +16,7 @@ export default function LandingPage() {
           </div>
         </div>
       </div>
-      <video autoPlay loop muted className="background-video">
+      <video autoPlay loop muted className="background-video object-fit-cover">
         <source src={video} type="video/mp4" />
       </video>
     </>
