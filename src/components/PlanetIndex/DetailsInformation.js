@@ -12,22 +12,22 @@ import './details-information-styles.css'
 
 const NAVBAR_HEIGHT = 70
 
-export function DetailsInformation () {
+export function DetailsInformation() {
   const containerRef = useRef(null)
-  
+
   const { scrollYProgress, scrollY } = useScroll({
     container: containerRef
   })
-  
+
   const [translateY, setTranslateY] = useState('0')
 
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
     setTranslateY(`${Math.min(latest * 750, 100)}px`)
   })
-  
-  
+
+
   const opacity = useTransform(scrollY, [0, 150], [0, 1])
-  
+
   return (
     <motion.div
       ref={containerRef}
@@ -47,7 +47,7 @@ export function DetailsInformation () {
         <div className="flex items-center justify-center absolute left-0 right-0 top-0">
           <h2 className="text-4xl flex-1 p-4 text-[34px] text-[#C3EDDF]">The Saturnian Ring Odyssey</h2>
         </div>
-        <img src={saturnImg} className="w-full h-full object-cover" alt=""/>
+        <img src={saturnImg} className="w-full h-full object-cover" alt="" />
         <motion.div style={{ opacity, transform: `translateY(${translateY})` }} className={`z-10 w-[320px] right-[10%] absolute translate-y-[25%] bottom-0 rounded card-gradient p-6`}>
           <p className="font-bold text-xl">Explore the rings of Saturn on this beautiful 4-night cruise</p>
           <ul className="mt-2 text-base list-disc">
@@ -83,7 +83,7 @@ export function DetailsInformation () {
               delay: 0.3
             }}
           >
-            <img src={saturnImg4} alt=""/>
+            <img src={saturnImg4} alt="" />
           </motion.div>
           <motion.div
             initial={{ transform: 'translate(200px)', opacity: 0 }}
@@ -94,7 +94,7 @@ export function DetailsInformation () {
               delay: 0.3
             }}
           >
-            <img src={saturnImg3} alt=""/>
+            <img src={saturnImg3} alt="" />
           </motion.div>
         </div>
         <motion.div
@@ -112,7 +112,7 @@ export function DetailsInformation () {
           <div
             className="mt-24"
           >
-            <img src={saturnImg2} className="w-full" alt=""/>
+            <img src={saturnImg2} className="w-full" alt="" />
           </div>
           <motion.div
             initial={{ transform: 'translateY(-200px)', opacity: 0 }}
@@ -127,7 +127,7 @@ export function DetailsInformation () {
               className="text-white text-lg w-[580px] right-[150px] bottom-[20px] absolute"
             >
               Day 2: voyage through the stars
-              <br/>
+              <br />
               Travel through the solar system in our brilliant luxury space-liner, the SS Ringleader, a state-of-the-art spacecraft designed ideally for navigating saturn’s rings.
             </p>
           </motion.div>
@@ -143,10 +143,10 @@ export function DetailsInformation () {
               delay: 0.3
             }}
           >
-            <img src={spaceshipImg} className="mx-auto w-full" alt=""/>
+            <img src={spaceshipImg} className="mx-auto w-full" alt="" />
           </motion.div>
           <p className="mt-48 text w-3/6 mx-auto text-center text-xl">
-            Some of the main features of thee craft including a strong hull to withstand the space debris that makes up Saturn’s rings, and an engine system built with maneuverability in mind, to make it as versatile as possible.
+            Some of the main features of the craft include a strong hull to withstand the space debris that makes up Saturn’s rings, and an engine system built with maneuverability in mind, to make ring travel as versatile as possible.
           </p>
           <div className="flex justify-around mt-48">
             <motion.div
@@ -159,7 +159,7 @@ export function DetailsInformation () {
                 delay: 0.3
               }}
             >
-              <img src={mimasImg} className="w-full" alt=""/>
+              <img src={mimasImg} className="w-full" alt="" />
               <p className="mt-4">Day 3: Asteroid hopping. Need I say any more? Spend this day moving between the rings of saturn, and exploring them up close! </p>
             </motion.div>
             <motion.div
@@ -172,12 +172,12 @@ export function DetailsInformation () {
                 delay: 0.3
               }}
             >
-              <img src={saturnImg5} className="w-full" alt=""/>
+              <img src={saturnImg5} className="w-full" alt="" />
               <p className="mt-4">
                 The SS Ringleader will find ideal asteroids for you to explore, and don’t forget- The whole experience will be in a zero-gravity environment! Don your space suit and enjoy swimming in the stars!*
-                <br/>
-                <br/>
-                <span className="italic text-base">*Saturn Travel and Affiliates are not responsible for injuries sustained exterior of the star craft.</span>
+                <br />
+                <br />
+                <span className="italic text-base">*Celestial Journeys and Affiliates are not responsible for injuries sustained exterior of the star craft.</span>
               </p>
             </motion.div>
           </div>
@@ -199,7 +199,7 @@ export function DetailsInformation () {
                 <button className="rounded bg-black text-center text-white p-2 w-full font-bold text-lg">Book - $5000 CAD</button>
               </div>
             </div>
-            <img src={bookBanner} className="h-[108px] w-full object-fit-cover" alt=""/>
+            <img src={bookBanner} className="h-[108px] w-full object-fit-cover" alt="" />
           </motion.div>
         </div>
       </div>
