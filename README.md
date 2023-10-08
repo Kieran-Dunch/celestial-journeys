@@ -30,6 +30,7 @@ Together, our team brings a powerful combination of technical expertise and desi
 #### Sources
 
 We used several tools to assist us in the generation of this application, including:
+
 - ChatGPT (idea generation)
-- Github Copilot (code completion, suggestions, front-end)
+- Github Copilot (code completion (front-end))
 - [NASA](https://science.nasa.gov/saturn/facts/) (facts, information, images)
